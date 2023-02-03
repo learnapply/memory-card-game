@@ -57,3 +57,28 @@ body {
 img {
   height: 150px;
 }
+
+@media screen and (max-width: 767px) {
+  body {
+    height: auto;
+  }
+
+  .header-container {
+    height: 5vh;
+    font-size: medium;
+  }
+
+  .scoreboard {
+    height: 3vh;
+    margin-bottom: 5px;
+  }
+
+  .card {
+    height: 100px;
+    width: 100px;
+  }
+
+  img {
+    width: 75px;
+  }
+}

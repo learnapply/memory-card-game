@@ -21,7 +21,6 @@ function Main() {
       setCurrentScore(currentScore + 1);
       setImages(shuffle(images));
     }
-    console.log(clickedIds);
   }
 
   return (

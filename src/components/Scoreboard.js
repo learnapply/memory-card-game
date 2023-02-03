@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
 
-function Scoreboard({bestScore, currentScore}) {
+function Scoreboard({ bestScore, currentScore }) {
   return (
-    <div>
-      <p>{bestScore}</p>
-      <p>{currentScore}</p>
+    <div className="scoreboard">
+      <p>Best score: {bestScore}</p>
+      <p>Current score: {currentScore}</p>
     </div>
-  )
+  );
 }
 
-export default Scoreboard
+export default Scoreboard;

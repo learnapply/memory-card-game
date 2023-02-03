@@ -106,17 +106,17 @@ export const images = [
     src: snail,
   },
   {
-    id: 19,
+    id: 17,
     name: "tiger",
     src: tiger,
   },
   {
-    id: 20,
+    id: 18,
     name: "turtle",
     src: turtle,
   },
   {
-    id: 21,
+    id: 19,
     name: "wolf",
     src: wolf,
   },

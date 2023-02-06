@@ -1,6 +1,6 @@
 import React from "react";
-import { render } from "@testing-library/react";
-import '@testing-library/jest-dom/extend-expect';
+import { render, fireEvent } from "@testing-library/react";
+import "@testing-library/jest-dom/extend-expect";
 import Card from "./Card";
 
 describe("Card", () => {
@@ -19,5 +19,22 @@ describe("Card", () => {
     expect(image).toBeInTheDocument();
     expect(image.src).toBe(imgUrl);
     expect(para).toBeInTheDocument();
+  });
+
+  it("triggers handleClick with correct id on div click", () => {
+    const id = 1;
+    const name = "Some name";
+    const imgUrl = "https://example.com/image.jpg";
+    const handleClick = jest.fn();
+
+    const { getByRole } = render(
+      <Card id={id} name={name} imgUrl={imgUrl} handleClick={handleClick} />
+    );
+
+    const div = getByRole("img");
+    fireEvent.click(div);
+
+    expect(handleClick).toHaveBeenCalledTimes(1);
+    expect(handleClick).toHaveBeenCalledWith(id);
   });
 });

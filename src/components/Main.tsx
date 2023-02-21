@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Scoreboard from "./Scoreboard";
 import Card from "./Card";
 import { images as imagesArr } from "../data/animals";
@@ -7,10 +7,10 @@ import { shuffle } from "../utils";
 function Main() {
   const [bestScore, setBestScore] = useState(0);
   const [currentScore, setCurrentScore] = useState(0);
-  const [clickedIds, setClickedIds] = useState([]);
+  const [clickedIds, setClickedIds] = useState<number[]>([]);
   const [images, setImages] = useState(imagesArr);
 
-  function handleClick(id) {
+  function handleClick(id: number): void {
     if (clickedIds.includes(id)) {
       if (currentScore > bestScore) setBestScore(currentScore);
       setCurrentScore(0);

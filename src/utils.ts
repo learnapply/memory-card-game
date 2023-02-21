@@ -1,4 +1,10 @@
-export const shuffle = (array) => {
+interface Image {
+  id: number;
+  name: string;
+  src: string;
+}
+
+export const shuffle = (array: Image[]) => {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];

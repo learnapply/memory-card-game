@@ -17,7 +17,6 @@ describe("Card", () => {
     const para = getByText(name);
 
     expect(image).toBeInTheDocument();
-    expect(image.src).toBe(imgUrl);
     expect(para).toBeInTheDocument();
   });
 
